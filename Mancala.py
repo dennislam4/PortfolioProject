@@ -148,12 +148,12 @@ class Mancala:
 
                 if adjust_index == 13:
                     print("player 2 takes another turn")
-                # special case 2, the final move is landed in an empty pit
+                # special case 2, the final move lands in an empty pit
                 elif adjust_index > 7 and self._board.get_board()[adjust_index] == 1:
                     self._board.get_board()[adjust_index] = 0
                     self._board.get_board()[13] += 1
                     self._board.get_board()[13] += self._board.get_board()[adjust_index - 7]
-                    self._board.get_board()[adjust_index - 7] = 0
+                    self._board.get_board()[adjust_index - 7] = 1
 
         return self._board.get_board()
 
