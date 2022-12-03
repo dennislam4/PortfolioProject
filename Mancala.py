@@ -153,7 +153,7 @@ class Mancala:
                     self._board.get_board()[adjust_index] = 0
                     self._board.get_board()[13] += 1
                     self._board.get_board()[13] += self._board.get_board()[adjust_index - 7]
-                    self._board.get_board()[adjust_index - 7] = 1
+                    self._board.get_board()[adjust_index - 7] += 1
 
         return self._board.get_board()
 
