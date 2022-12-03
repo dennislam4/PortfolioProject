@@ -109,7 +109,7 @@ class Mancala:
         it has ended. If game has ended, returns 'Game is ended'. Returns list at the end of current seed number and
         stores indicating which player they belong to.
         """
-        if pit_index > 6 or pit_index <= 0:
+        if pit_index > 6 or pit_index < 1:
             return "Invalid number for pit index"
 
         elif self._board.check_pit(1) or self._board.check_pit(2):
@@ -153,7 +153,7 @@ class Mancala:
                     self._board.get_board()[adjust_index] = 0
                     self._board.get_board()[13] += 1
                     self._board.get_board()[13] += self._board.get_board()[adjust_index - 7]
-                    self._board.get_board()[adjust_index - 7] += 1
+                    self._board.get_board()[adjust_index - 7] = 0
 
         return self._board.get_board()
 
