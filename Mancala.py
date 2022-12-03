@@ -82,9 +82,7 @@ class Mancala:
     Class object that represents the Mancala game and its mechanics/rules as well as the player information regarding
     gameplay.
     """
-
     def __init__(self):
-        # self._players = {1: None, 2: None}
         self._board = Board(seeds=4, pits=6)
         self._players = []
 
@@ -176,7 +174,4 @@ class Mancala:
         else:
             return "Game is not ended"
 
-    def end_game(self):
-        """Stops the game."""
-        pass
 
