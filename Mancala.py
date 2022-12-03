@@ -166,9 +166,9 @@ class Mancala:
             player_one_score = self._board.get_P1_store()
             player_two_score = self._board.get_P2_store()
             if player_one_score > player_two_score:
-                return "Winner is player 1 " + self._players[1].get_name()
+                return "Winner is player 1 " + self._players[0].get_name()
             elif player_two_score > player_one_score:
-                return "Winner is player 2 " + self._players[2].get_name()
+                return "Winner is player 2 " + self._players[1].get_name()
             elif player_one_score == player_two_score:
                 return "It's a tie"
         else:
